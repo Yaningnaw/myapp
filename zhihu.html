@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+	
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+		
+      	var ws=null,nw=null;
+          mui.plusReady(function () {
+              ws=plus.webview.currentWebview();
+            nw=plus.webview.create("https://www.zhihu.com/");
+            ws.append(nw);
+          });
+          
+          var _back = mui.back;
+          mui.back = function(){
+              //查询Webview窗口是否可后退
+            nw.canBack( function(e){
+                var canback=e.canBack;
+                if(canback){
+                    nw.back();
+                }else{
+                    _back();
+                }
+            });
+          }
+		</script>
+	</body>
+
+</html>

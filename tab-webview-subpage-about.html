@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+		
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<script src="js/iconfont.js"></script>
+		<link rel="stylesheet" href="css/mui.min.css">
+		<style type="text/css">
+			.icon {
+				width: 1em;
+				height: 1em;
+				vertical-align: -0.15em;
+				fill: currentColor;
+				overflow: hidden;
+			}
+		</style>
+		<style>
+			html,body {
+				background-color: #efeff4;
+			}
+			p{
+				font-family: "微软雅黑";
+				color:#EFEFF4;
+				font-size: 40px;
+				text-align: center;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div style="background-color: #007AFF;width: 100%;height: 200px; padding-top: 30px;line-height: 110px;">
+			<p style="text-align:center">
+				学习使我快乐
+			</p>
+		</div>
+		<div>
+		<ul class="mui-table-view mui-grid-view mui-grid-9">
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		    <!--
+            <a href="#" id="zhihu" onclick="showWithWaiting()">-->
+            <a href="#" id="zhihu" >	
+		        <span class="mui-icon ">
+		        	<svg class="icon">
+		        	<use xlink:href="#icon-zhihu"></use>
+		        </span>
+		        <div class="mui-media-body">知乎</div>
+		    </a>
+		</li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		    <a href="#">
+		        <span class="mui-icon mui-icon-email"><span class="mui-badge mui-badge-red">5</span></span>
+		        <div class="mui-media-body">Email</div>
+		    </a>
+		</li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		    <a href="#"name="intonewpage">
+		        <span class="mui-icon mui-icon-chatbubble"></span>
+		        <div class="mui-media-body">Chat</div>
+		    </a>
+		</li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		    <a href="#"name="intonewpage">
+		        <span class="mui-icon mui-icon-location"></span>
+		        <div class="mui-media-body">Location</div>
+		    </a>
+		</li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		    <a href="#"name="intonewpage">
+		        <span class="mui-icon mui-icon-search"></span>
+		        <div class="mui-media-body">Search</div>
+		    </a>
+		</li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		    <a href="#"name="intonewpage">
+		        <span class="mui-icon mui-icon-phone"></span>
+		        <div class="mui-media-body">Phone</div>
+		    </a>
+		</li>
+		    </ul>
+		</div>
+		
+		
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script src="js/mui.js"></script>
+	<script>
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+		mui.ready(function() {
+					document.querySelector('#zhihu').addEventListener('click', function() {
+						mui.openWindow({
+							url: 'zhihu.html',
+							id: 'zhihu.html'
+						},
+						{
+    						title:{//标题配置
+        						text:"知乎",//标题文字
+   						 },
+   						 back:{//左上角返回箭头
+      						  image:{
+           						 base64Data:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAb1BMVEUAAAAAev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8AAACubimgAAAAI3RSTlMAGfUTGfQTGPMSGPIYGhgaGBsXGxcbFxwXHBccFhwWHRYdHWufDPQAAAABYktHRACIBR1IAAAAB3RJTUUH4QETEBwooeTlkQAAAJVJREFUSMft1EkSgkAQRNFGUXFWHBDBibr/HTUwD5B/48Ig1y+io7u6MqUhf5hsNEY+j5hMgZ/FJ8Xc9ovos3T96utjbfqN/Nb0O/m96Uv5g+mP8ifTn+Ur01/ka9Nf5RvTt/I309/lH6Z/yr9Mn+Q71/MT8B34K/E58Enzv8R/K98HvnF8p3lr8F7izce7lbf3kJ/lDQp9HdBhgg3PAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE3LTAxLTE5VDE2OjI4OjQwKzA4OjAwpTDFwQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNy0wMS0xOVQxNjoyODo0MCswODowMNRtfX0AAAAASUVORK5CYII='
+       						 }
+    						}
+						})
+					})
+
+				})
+		
+	</script>
+</html>
